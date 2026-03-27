@@ -1,0 +1,19 @@
+这个仓库的作用是提供 Claude API 的 Python SDK
+
+主要功能：
+
+API 客户端库 — 提供 Python 开发者调用 Claude API 的便捷接口
+安装 — 通过 pip install anthropic 安装
+使用 — 可以直接在 Python 代码中导入和使用 Claude
+
+
+from anthropic import Anthropic
+
+client = Anthropic(api_key="your-api-key")
+message = client.messages.create(
+    max_tokens=1024,
+    messages=[{"role": "user", "content": "Hello, Claude"}],
+    model="claude-opus-4-6",
+)
+
+如果你要在 Python 应用中集成 Claude AI，这个 SDK 就是官方提供的工具库。文档在 https://platform.claude.com/docs/en/api/sdks/python
